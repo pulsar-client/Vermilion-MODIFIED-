@@ -2,7 +2,7 @@ local Main = loadstring(game:HttpGet("https://raw.githubusercontent.com/Reapvita
 
 local repetitions = 0
 local maxRepetitions = 3
-local delayTime = 3 -- seconds
+local delayTime = 5 -- seconds
 
 -- Define your texts in a table
 local texts = {
@@ -26,8 +26,8 @@ local function executeTypeWrite()
                 Color3.new(29,0,0), --// Main color (not outline)
                 Color3.new(39,0,0), --// Outline Color (aka border text color)
                 "rbxassetid://5093601873", --// Voice (set to "rbxassetid://0" to remove)
-                60, --// makes the text rotate (higher = slower lower = faster)
-                10, --// rotate multiplier (higher = rotates more you get the point bro)
+                90, --// makes the text rotate (higher = slower lower = faster)
+                16, --// rotate multiplier (higher = rotates more you get the point bro)
                 .3, --// if you use special chars (, ! ? ; it delays by that number)
                 35, --// pos rotspeed for X axis
                 35, --// pos rotspeed for Y axis
