@@ -6,9 +6,10 @@ local delayTime = 5 -- seconds
 
 -- Define your texts in a table
 local texts = {
-    'Fatal souls get corrupted for a reason.', -- Text for the 1st execution
-    'The shadows whisper ancient secrets.',    -- Text for the 2nd execution
-    'Darkness consumes all, eventually.'       -- Text for the 3rd execution
+    '...', -- Text for the 1st execution
+    'Fatal souls get corrupted for a reason.',   -- Text for the 2nd execution
+    'The shadows whisper ancient secrets',    -- Text for the 3rd execution
+    'Darkness consumes all, eventually.'    -- Text for the 4th execution
 }
 
 local function executeTypeWrite()
