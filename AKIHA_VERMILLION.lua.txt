@@ -1684,15 +1684,15 @@ end end), "Move3")
 game:GetService("StarterGui"):SetCore("SendNotification", 
 { Title = string.upper('Akiha Vermillion'); 
 Text = "LOADED";
-Duration = 5; Button1 = "hell yeah"; })
+Duration = 5; Button1 = "- + -"; })
 
 end
 MainEnv()
 notif:SendNotification("Success", '"AKIHA VERMILLION" LOADED!', 4)
 task.wait(4)
-notif:SendNotification("Warning", 'Made by reap4985 on discord', 4)
+notif:SendNotification("Warning", 'Made by matter on discord', 4)
 task.wait(4)
-notif:SendNotification("Info", 'Credits: \nScript made by Reap', 3)
+notif:SendNotification("Info", 'Credits: \nScript made by Matter', 3)
 task.wait(3)
 notif:SendNotification("Info", 'VFX by Reap', 3)
 task.wait(3)
