@@ -9,16 +9,22 @@
 External:
 
 - Make a main loadstring. = ➗
+
 - Make it less buggy. = ➗
 
+- Repost everything Reap has to here. = ➗
+
 Script: 
+
 - Add Better Graphics. = ➖
 
 - Replace the phrases of the script. = ➗
 
-- Add Better Ambience = ➖
+- Add Better And New Music = ➗
 
 - Add 5th move. = ➖
+
+
 
 - Add custom player avatars. = ➖
 
