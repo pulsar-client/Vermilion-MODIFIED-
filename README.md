@@ -4,13 +4,7 @@
 - This is a private script!
 - This is only used for fun and not for advantages.
 
-# Secend version plans:
-
-External:
-Make a proper update log.
-Make a main loadstring.
-
-Plans For #A-V: 2.0
+# Plans For #A-V: 2.0
 
 External:
 - Make a proper update log. = ➖
