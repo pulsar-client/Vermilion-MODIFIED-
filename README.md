@@ -13,14 +13,25 @@ Make a main loadstring.
 Plans For #A-V: 2.0
 
 External:
-Make a proper update log.
-Make a main loadstring.
+- Make a proper update log. = ➖
+
+- Make a main loadstring. = ➖
 
 Script: 
-Add Better Graphics.
-Replace the phrases of the script.
-Add Better Ambience.
-Add 5th move.
-Add custom player avatar.
+- Add Better Graphics. = ➖
+
+- Replace the phrases of the script. = ➖
+
+- Add Better Ambience.= ➖
+
+- Add 5th move. = ➖
+
+- Add custom player avatars. = ➖
+
+# Sign meanings!
+
+- ➕ = Completed.
+- ➖ = Incomplete/To be completed.
+- ➗ = In-progress currently.
 
 # I got the best motivation to continue this shit.
