@@ -7,7 +7,6 @@
 # Plans For #A-V: 2.0 (Progress: 0%)
 
 External:
-- Make a proper update log. = ➖
 
 - Make a main loadstring. = ➖
 
