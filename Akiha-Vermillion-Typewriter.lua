@@ -1,53 +1,70 @@
-local Main = loadstring(game:HttpGet("https://raw.githubusercontent.com/Reapvitalized/Misc/refs/heads/main/TypewriterFu.lua"))()
+local Main = {}
+function Main:TypeWrite(txt,col,outlinecol,voiceid,rotspeed,rotmult,SpecialCharDly,rotspeed2,rotspeed3,agression,agression2)
 
-local repetitions = 0
-local maxRepetitions = 3
-local delayTime = 5 -- seconds
+task.spawn(function()
+local HealthBar = Instance.new("BillboardGui")
+local Frame = Instance.new("Frame")
+local PName = Instance.new("TextLabel")
+local Text = Instance.new('Sound', workspace);
+Text.SoundId=voiceid;Text.Looped=false;
+Text.Volume = 5;Text.Name='Text'
+pcall(function()
+game.Players.LocalPlayer.Character.Head.Text:Destroy()
+workspace.Text:Destroy()
+end)
+HealthBar.Name = "Text"
+HealthBar.Parent = game.Players.LocalPlayer.Character.Head
+HealthBar.ExtentsOffset = Vector3.new(0, 1, 0)
+HealthBar.Size = UDim2.new(4, 0, 2, 0)
+HealthBar.ZIndexBehavior = Enum.ZIndexBehavior.Global
+Frame.Parent = HealthBar
+Frame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Frame.BackgroundTransparency = 1.000
+Frame.Size = UDim2.new(1, 0, 1, 0)
 
--- Define your texts in a table
-local texts = {
-    '...', -- Text for the 1st execution
-    'Fatal souls get corrupted for a reason.',   -- Text for the 2nd execution
-    'The shadows whisper ancient secrets',    -- Text for the 3rd execution
-    'Darkness consumes all, eventually.'    -- Text for the 4th execution
-}
+PName.Name = "PName"
+PName.Parent = Frame
+PName.BackgroundTransparency = 1
+PName.Position = UDim2.new(-1.0919999976, 0, -0.800000012, 0)
+PName.Size = UDim2.new(3, 0, 1, 0)
+PName.Font = Enum.Font.Antique
+PName.Text = ""
+PName.TextColor3 = col
+PName.TextScaled = true
+PName.TextSize = 3
+PName.TextStrokeColor3 = outlinecol
+PName.TextStrokeTransparency = 0.000
+PName.TextWrapped = true
+PName.TextYAlignment = Enum.TextYAlignment.Top
+Frame.ZIndex = 15
+spawn(function()
+for i = 1,1355 do 
+PName.Rotation = math.cos(i/rotspeed)*rotmult
+HealthBar.ExtentsOffset = Vector3.new(math.cos(i/rotspeed2)*agression,2+math.sin(i/rotspeed3)*agression2,0) 
+task.wait(.01) end end)
 
-local function executeTypeWrite()
-    -- Check if we have more repetitions to do
-    if repetitions < maxRepetitions then
-        repetitions = repetitions + 1 -- Increment before use to get 1, 2, 3
-
-        -- Get the current text based on the repetition number
-        local currentText = texts[repetitions]
-
-        -- Ensure we have a text for this repetition, though unlikely to be nil with our setup
-        if currentText then
-            Main:TypeWrite(
-                currentText, --// The text is now dynamic!
-                Color3.new(29,0,0), --// Main color (not outline)
-                Color3.new(39,0,0), --// Outline Color (aka border text color)
-                "rbxassetid://5093601873", --// Voice (set to "rbxassetid://0" to remove)
-                90, --// makes the text rotate (higher = slower lower = faster)
-                16, --// rotate multiplier (higher = rotates more you get the point bro)
-                .3, --// if you use special chars (, ! ? ; it delays by that number)
-                35, --// pos rotspeed for X axis
-                35, --// pos rotspeed for Y axis
-                .2, --// pos multiplier for X axis
-                .2 --// pos multiplier for Y axis
-            )
-        else
-            warn("No text defined for repetition number: " .. repetitions)
-        end
-    end
+function tw(s)
+local a = ""
+local s_l = #s
+for i = 1, s_l do
+Text:Play()
+local c = string.sub(s, i, i)
+a = a .. c
+PName.Text = a
+if c == "." then
+wait(.6)
+elseif c == ";" then
+wait(SpecialCharDly)
+elseif c == "," then
+wait(SpecialCharDly)
+elseif c == "!" then
+wait(SpecialCharDly)
 end
-
--- Initial call (for the 1st text)
-executeTypeWrite()
-
--- Subsequent calls using a loop and task.wait (for the 2nd and 3rd texts)
-for i = 1, maxRepetitions - 1 do
-    task.wait(delayTime)
-    executeTypeWrite()
+wait(.03)
+end end
+tw(txt)
+task.wait(2)
+HealthBar:Destroy()
+end)
 end
-
-print("Typewriter script sequence initiated with varied texts.")
+return Main
