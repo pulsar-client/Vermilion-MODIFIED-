@@ -9,6 +9,7 @@
 External:
 
 - Make a main loadstring. = ➗
+- Make it less buggy. = ➗
 
 Script: 
 - Add Better Graphics. = ➖
