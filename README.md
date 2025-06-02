@@ -10,11 +10,17 @@ External:
 Make a proper update log.
 Make a main loadstring.
 
+Plans For #A-V: 2.0
+
+External:
+Make a proper update log.
+Make a main loadstring.
+
 Script: 
-Add Ultimata Graphics 1.2
+Add Better Graphics.
 Replace the phrases of the script.
-Add Better Ambience 2.0 (Newest if released)
+Add Better Ambience.
 Add 5th move.
-Add custom player.
+Add custom player avatar.
 
 # I got the best motivation to continue this shit.
