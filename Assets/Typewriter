@@ -2,16 +2,16 @@ local Main = loadstring(game:HttpGet("https://raw.githubusercontent.com/pulsar-c
 
 
 Main:TypeWrite(
-'Hello, World! This is an. test. To see, The?? Custom Modifiers', --// The text
-Color3.new(1,1,1), --// Main color (not outline)
-Color3.new(0,0,0), --// Outline Color (aka border text color)
+'Fsyhfghgdfgnenebebebebennenenbenebebdbhhzjsjjneehsndbsshsjsndndndndndndndn', --// The text
+Color3.new(9,0,0.1), --// Main color (not outline)
+Color3.new(2,0,0), --// Outline Color (aka border text color)
 "rbxassetid://5093601873", --// Voice (set to "rbxassetid://0" to remove)
-35, --// makes the text rotate (higher = slower lower = faster)
-2, --// rotate multiplier (higher = rotates more you get the point bro)
+19, --// makes the text rotate (higher = slower lower = faster)
+8.9, --// rotate multiplier (higher = rotates more you get the point bro)
 .3, --// if you use special chars (, ! ? ; it delays by that number)
 
 35, --// pos rotspeed for X axis
 35, --// pos rotspeed for Y axis
-.2, --// pos multiplier for X axis
-.2 --// pos multiplier for Y axis
+.3, --// pos multiplier for X axis
+.6 --// pos multiplier for Y axis
     )
