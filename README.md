@@ -20,7 +20,7 @@ Script:
 
 - Replace the phrases of the script. = ➕
 
-- Add Auto-Music installation and new music = ➗
+- Add Auto-Music installation and new music also replace vahika thing = ➗
 
 - Add 5th move. = ➖
 
