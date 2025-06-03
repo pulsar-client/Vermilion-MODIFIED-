@@ -1,17 +1,73 @@
 local Main = loadstring(game:HttpGet("https://raw.githubusercontent.com/pulsar-client/Vermilion-MODIFIED-/refs/heads/main/Akiha-Vermillion-Typewriter.lua"))()
 
+-- Define a delay duration in seconds
+local quoteDelay = 3 -- Adjust this value as needed for the pause between quotes
 
+-- First Quote
 Main:TypeWrite(
-'Fsyhfghgdfgnenebebebebennenenbenebebdbhhzjsjjneehsndbsshsjsndndndndndndndn', --// The text
-Color3.new(9,0,0.1), --// Main color (not outline)
-Color3.new(2,0,0), --// Outline Color (aka border text color)
-"rbxassetid://5093601873", --// Voice (set to "rbxassetid://0" to remove)
-19, --// makes the text rotate (higher = slower lower = faster)
-8.9, --// rotate multiplier (higher = rotates more you get the point bro)
-.3, --// if you use special chars (, ! ? ; it delays by that number)
+    'Fsyhfghgdfgnenebebebebennenenbenebebdbhhzjsjjneehsndbsshsjsndndndndndndndn', --// The text
+    Color3.new(9,0,0.1), --// Main color (not outline)
+    Color3.new(2,0,0), --// Outline Color (aka border text color)
+    "rbxassetid://5093601873", --// Voice (set to "rbxassetid://0" to remove)
+    19, --// makes the text rotate (higher = slower lower = faster)
+    8.9, --// rotate multiplier (higher = rotates more you get the point bro)
+    .3, --// if you use special chars (, ! ? ; it delays by that number)
+    35, --// pos rotspeed for X axis
+    35, --// pos rotspeed for Y axis
+    .3, --// pos multiplier for X axis
+    .6 --// pos multiplier for Y axis
+)
 
-35, --// pos rotspeed for X axis
-35, --// pos rotspeed for Y axis
-.3, --// pos multiplier for X axis
-.6 --// pos multiplier for Y axis
-    )
+-- Wait before the next quote appears
+task.wait(quoteDelay)
+
+-- Second Quote
+Main:TypeWrite(
+    'This is the second quote. You can customize its appearance too!', --// The text
+    Color3.new(0.1, 9, 0), --// Main color (e.g., green)
+    Color3.new(0, 2, 0), --// Outline Color (e.g., darker green)
+    "rbxassetid://5093601873", --// Voice
+    22, --// rotation speed
+    10, --// rotate multiplier
+    .4, --// delay for special chars
+    40, --// pos rotspeed for X axis
+    40, --// pos rotspeed for Y axis
+    .4, --// pos multiplier for X axis
+    .7 --// pos multiplier for Y axis
+)
+
+-- Wait before the next quote appears
+task.wait(quoteDelay)
+
+-- Third Quote
+Main:TypeWrite(
+    'And here is the third one, with different settings!', --// The text
+    Color3.new(0, 0.1, 9), --// Main color (e.g., blue)
+    Color3.new(0, 0, 2), --// Outline Color (e.g., darker blue)
+    "rbxassetid://0", --// No voice for this quote
+    15, --// rotation speed
+    7, --// rotate multiplier
+    .2, --// delay for special chars
+    30, --// pos rotspeed for X axis
+    30, --// pos rotspeed for Y axis
+    .2, --// pos multiplier for X axis
+    .5 --// pos multiplier for Y axis
+)
+
+-- Wait before the next quote appears
+task.wait(quoteDelay)
+
+-- Fourth Quote
+Main:TypeWrite(
+    'Finally, the fourth quote to complete the set!', --// The text
+    Color3.new(9, 9, 0.1), --// Main color (e.g., yellow)
+    Color3.new(2, 2, 0), --// Outline Color (e.g., darker yellow)
+    "rbxassetid://5093601873", --// Voice
+    25, --// rotation speed
+    12, --// rotate multiplier
+    .5, --// delay for special chars
+    45, --// pos rotspeed for X axis
+    45, --// pos rotspeed for Y axis
+    .5, --// pos multiplier for X axis
+    .8 --// pos multiplier for Y axis
+)
