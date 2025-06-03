@@ -5,7 +5,7 @@ local quoteDelay = 3 -- Adjust this value as needed for the pause between quotes
 
 -- First Quote
 Main:TypeWrite(
-    'Shatter the world throughout true imagination.', --// The text
+    '...', --// The text
     Color3.new(9,0,0.1), --// Main color (not outline)
     Color3.new(2,0,0), --// Outline Color (aka border text color)
     "rbxassetid://12221976", --// Voice (set to "rbxassetid://0" to remove)
@@ -23,7 +23,7 @@ task.wait(quoteDelay)
 
 -- Second Quote
 Main:TypeWrite(
-    'The only way to do great work is to love what you do.', --// The text
+    'Shatter the world.', --// The text
     Color3.new(9, 0, 0.1), --// Main color
     Color3.new(2, 0, 0), --// Outline Color
     "rbxassetid://12221976", --// Voice
@@ -41,7 +41,7 @@ task.wait(quoteDelay)
 
 -- Third Quote
 Main:TypeWrite(
-    'Innovation distinguishes between a leader and a follower.', --// The text
+    'Thy reckons shallth be heard.', --// The text
     Color3.new(9, 0, 0.1), --// Main color
     Color3.new(2, 0, 0), --// Outline Color
     "rbxassetid://12221976", --// voice
@@ -59,7 +59,7 @@ task.wait(quoteDelay)
 
 -- Fourth Quote
 Main:TypeWrite(
-    'Your time is limited, don\'t waste it living someone else\'s life.', --// The text
+    'Thy ancient souls whisper secrets.', --// The text
     Color3.new(9, 0, 0.1), --// Main color
     Color3.new(2, 0, 0), --// Outline Color
     "rbxassetid://12221976", --// Voice
