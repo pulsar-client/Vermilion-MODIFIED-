@@ -4,7 +4,7 @@
 - This is a private script!
 - This is only used for fun and not for advantages.
 
-# Plans For #A-V: 2.0 (Progress: 5%)
+# Plans For #A-V: 2.0 (Progress: 6%)
 
 External:
 
@@ -18,7 +18,7 @@ Script:
 
 - Add Better Graphics. = ➖
 
-- Replace the phrases of the script. = ➗
+- Replace the phrases of the script. = ➕
 
 - Add Better And New Music = ➗
 
