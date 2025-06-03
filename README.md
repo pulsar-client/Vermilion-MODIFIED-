@@ -10,7 +10,7 @@ External:
 
 - Make a main loadstring. = ➕
 
-- Make it less buggy. = ➗
+- Make it less buggy. = ➕
 
 - Repost everything Reap has to here. = ➗
 
