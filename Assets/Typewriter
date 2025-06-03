@@ -8,7 +8,7 @@ Main:TypeWrite(
     '...', --// The text
     Color3.new(9,0,0.1), --// Main color (not outline)
     Color3.new(2,0,0), --// Outline Color (aka border text color)
-    "rbxassetid://76771514212824", --// Voice (set to "rbxassetid://0" to remove)
+    "rbxassetid://3015952289", --// Voice (set to "rbxassetid://0" to remove)
     19, --// makes the text rotate (higher = slower lower = faster)
     8.9, --// rotate multiplier (higher = rotates more you get the point bro)
     .3, --// if you use special chars (, ! ? ; it delays by that number)
@@ -26,7 +26,7 @@ Main:TypeWrite(
     'Shatter the world.', --// The text
     Color3.new(9, 0, 0.1), --// Main color
     Color3.new(2, 0, 0), --// Outline Color
-    "rbxassetid://76771514212824", --// Voice
+    "rbxassetid://3015952289", --// Voice
     22, --// rotation speed
     10, --// rotate multiplier
     .4, --// delay for special chars
@@ -44,7 +44,7 @@ Main:TypeWrite(
     'Thy reckons shallth be heard.', --// The text
     Color3.new(9, 0, 0.1), --// Main color
     Color3.new(2, 0, 0), --// Outline Color
-    "rbxassetid://76771514212824", --// voice
+    "rbxassetid://3015952289", --// voice
     15, --// rotation speed
     7, --// rotate multiplier
     .2, --// delay for special chars
@@ -62,7 +62,7 @@ Main:TypeWrite(
     'Thy ancient souls whisper secrets.', --// The text
     Color3.new(9, 0, 0.1), --// Main color
     Color3.new(2, 0, 0), --// Outline Color
-    "rbxassetid://76771514212824", --// Voice
+    "rbxassetid://3015952289", --// Voice
     25, --// rotation speed
     12, --// rotate multiplier
     .5, --// delay for special chars
