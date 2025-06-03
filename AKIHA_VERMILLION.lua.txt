@@ -131,7 +131,7 @@ for i = 1,9999 do if _G.Gay == true or e.Parent ~= ib then break end
 pcall(function()
 sai.Image = 'rbxassetid://0'
 
-ib.IconLabel.Text = 'Akiha Vermillion'
+ib.IconLabel.Text = 'Corrupt Bloxxer'
 sai.IconGlow2.ImageTransparency = .8+math.sin(i/55)/25
 end)
 task.wait(.01) end end) end end)
@@ -1688,7 +1688,7 @@ Duration = 5; Button1 = "0\(w)/0"; })
 
 end
 MainEnv()
-notif:SendNotification("Success", '"AKIHA VERMILLION" LOADED!', 4)
+notif:SendNotification("Success", '"Corrupt Bloxxer" LOADED!', 4)
 task.wait(4)
 notif:SendNotification("Warning", 'Made by matter on discord', 4)
 task.wait(4)
@@ -1706,7 +1706,7 @@ notif:SendNotification("Info", 'Lightning Effects by EvLightning on Github', 3)
 task.wait(3)
 notif:SendNotification("Info", 'Signal Script by i.am.an.agent on Discord', 3)
 task.wait(3)
-notif:SendNotification("Info", 'Character "Akiha Vermillion" from "Tsukihime"', 
+notif:SendNotification("Info", 'Character Inspired by "Akiha Vermillion" from "Tsukihime"', 
 16)
 --[[
 TODO: 
