@@ -1,0 +1,40 @@
+
+
+local Players = game:GetService("Players")
+local ReplicatedStorage = game:GetService("ReplicatedStorage")
+local RunService = game:GetService("RunService")
+
+local player = Players.LocalPlayer
+
+-- Replace with a valid accessory ID from the Roblox Catalog
+local ACCESSORY_ID = 116771547746390 
+
+local function addAccessoryLocally(character)
+    if not character or not character:FindFirstChildOfClass("Humanoid") then
+        return
+    end
+
+    -- Check if the accessory is already attached to prevent duplicates
+    if character:FindFirstChild("MyCustomLocalAccessory") then
+        return
+    end
+
+    local accessory = game:GetService("InsertService"):LoadAsset(ACCESSORY_ID):FindFirstChildOfClass("Accessory")
+    
+    if accessory then
+        -- Name it uniquely so you can reference it later if needed
+        accessory.Name = "MyCustomLocalAccessory" 
+        accessory.Parent = character -- Attach it to the character
+        print("Locally added accessory ID " .. ACCESSORY_ID .. " to your character.")
+    else
+        warn("Could not load accessory model for ID: " .. ACCESSORY_ID)
+    end
+end
+
+-- Connect to CharacterAdded to ensure the accessory is added when the character spawns
+player.CharacterAdded:Connect(addAccessoryLocally)
+
+-- If the character already exists when the script runs, add the accessory immediately
+if player.Character then
+    addAccessoryLocally(player.Character)
+end
