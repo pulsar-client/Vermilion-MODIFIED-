@@ -23,8 +23,8 @@ task.wait(quoteDelay)
 
 -- Second Quote
 Main:TypeWrite(
-    '', --// The text
-    Color3.new(9, 0, 0.1), --// Main color 
+    'The only way to do great work is to love what you do.', --// The text
+    Color3.new(9, 0, 0.1), --// Main color
     Color3.new(2, 0, 0), --// Outline Color
     "rbxassetid://12221976", --// Voice
     22, --// rotation speed
@@ -41,9 +41,9 @@ task.wait(quoteDelay)
 
 -- Third Quote
 Main:TypeWrite(
-    '', --// The text
-    Color3.new(9, 0, 0.1), --// Main color 
-    Color3.new(2, 0, 0), --// Outline Color 
+    'Innovation distinguishes between a leader and a follower.', --// The text
+    Color3.new(9, 0, 0.1), --// Main color
+    Color3.new(2, 0, 0), --// Outline Color
     "rbxassetid://12221976", --// voice
     15, --// rotation speed
     7, --// rotate multiplier
@@ -59,8 +59,8 @@ task.wait(quoteDelay)
 
 -- Fourth Quote
 Main:TypeWrite(
-    '', --// The text
-    Color3.new(9, 0, 0.1), --// Main color 
+    'Your time is limited, don\'t waste it living someone else\'s life.', --// The text
+    Color3.new(9, 0, 0.1), --// Main color
     Color3.new(2, 0, 0), --// Outline Color
     "rbxassetid://12221976", --// Voice
     25, --// rotation speed
