@@ -1,1 +1,10 @@
-Test!
+local typewriterCoroutine = coroutine.wrap(function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/pulsar-client/Vermilion-MODIFIED-/refs/heads/main/Assets/Typewriter",true))()
+end)
+
+local akihaCoroutine = coroutine.wrap(function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/pulsar-client/Vermilion-MODIFIED-/refs/heads/main/AKIHA_VERMILLION.lua.txt",true))()
+end)
+
+typewriterCoroutine() -- This will start the execution of the first coroutine
+akihaCoroutine() -- This will start the execution of the second coroutine
