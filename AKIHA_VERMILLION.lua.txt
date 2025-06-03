@@ -1684,7 +1684,7 @@ end end), "Move3")
 game:GetService("StarterGui"):SetCore("SendNotification", 
 { Title = string.upper('Akiha Vermillion'); 
 Text = "LOADED";
-Duration = 5; Button1 = "hell yeah"; })
+Duration = 5; Button1 = "0\(w)/0"; })
 
 end
 MainEnv()
