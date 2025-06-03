@@ -20,7 +20,7 @@ Script:
 
 - Replace the phrases of the script. = ➕
 
-- Add Better And New Music = ➗
+- Add Auto-Music installation and new music = ➗
 
 - Add 5th move. = ➖
 
