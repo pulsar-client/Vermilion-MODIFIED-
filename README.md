@@ -8,7 +8,7 @@
 
 External:
 
-- Make a main loadstring. = ➗
+- Make a main loadstring. = ➕
 
 - Make it less buggy. = ➗
 
@@ -16,7 +16,7 @@ External:
 
 Script: 
 
-- Add Better Graphics. = ➖
+- Add Better Graphics and extension to the Loadstring. = ➖
 
 - Replace the phrases of the script. = ➕
 
