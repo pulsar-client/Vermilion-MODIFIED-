@@ -1565,19 +1565,134 @@ repeat wait() until lp.PlayerGui.Bar.MagicHealth.Ult.Visible == false
 Ult()
 end 
 end end),"Ult Start Bind")
+AddSignal( 
+lp.PlayerGui.Bar.MagicHealth.ImageButton.MouseButton1Click:Connect(function()
+if lp.PlayerGui.Bar.MagicHealth.Ult.Visible == true then 
+repeat wait() until lp.PlayerGui.Bar.MagicHealth.Ult.Visible == false 
+Ult()
+end
+end),"Ult Start Tap")
+_G.Enabled = false
+local uis = game:GetService("UserInputService")
+local basemini = lp.PlayerGui.Hotbar.Backpack.Hotbar["4"]
+local base = lp.PlayerGui.Hotbar.Backpack.Hotbar["4"].Base
+basemini.Visible = true
+base.Reuse.Visible = false
+getgenv().Cooldown4 = .2
+function Four()
+pcall(function() _G.yse:Disconnect() end)
+if _G.Enabled == false then 
+_G.Enabled = true
+else  
+_G.Enabled = false
+end
 
+if _G.Enabled == true then 
+base.ToolName.Text = "Unlock"
+else 
+base.ToolName.Text = "Lock"
+end
+_G.yse = game:GetService("RunService").Heartbeat:Connect(function(step)
+if _G.EN ~= nil then 
+if _G.EN ~= char then 
+hrp.CFrame = CFrame.lookAt(hrp.Position, 
+Vector3.new(_G.EN.HumanoidRootPart.Position.X,hrp.Position.Y,_G.EN.HumanoidRootPart.Position.Z))
+game:GetService("RunService").RenderStepped:Wait()
+hrp.CFrame = CFrame.lookAt(hrp.Position, 
+Vector3.new(_G.EN.HumanoidRootPart.Position.X,hrp.Position.Y,_G.EN.HumanoidRootPart.Position.Z))
+end end
+end) 
+spawn(function()
+repeat wait() until char.Humanoid.Health == 0 or _G.Enabled == false 
+_G.yse:Disconnect()
+end) end
+local cdcc = lp.PlayerGui.Hotbar.Backpack.LocalScript.Cooldown
+base.ToolName.Text = "Lock"
+AddSignal(
+uis.InputBegan:Connect(function(inputs, event)
+
+if event == true then return end
+if inputs.KeyCode == Enum.KeyCode.Four and not base:FindFirstChild("Cooldown") then
+spawn(function() 		Four() end)
+local deez = cdcc:Clone()
+deez.Parent = base
+game:GetService("TweenService"):Create(deez, 
+TweenInfo.new(getgenv().Cooldown4,Enum.EasingStyle.Linear),
+{Size=UDim2.new(1,0,0,0)}):Play();
+wait(getgenv().Cooldown4)
+deez:Destroy()
+end end),"Move4 Bind")
+AddSignal( 
+base.MouseButton1Click:Connect(function()
+if not base:FindFirstChild("Cooldown") then
+spawn(function() 		Four() end)
+local deez = cdcc:Clone()
+deez.Parent = base
+game:GetService("TweenService"):Create(deez, 
+TweenInfo.new(getgenv().Cooldown4,Enum.EasingStyle.Linear),
+{Size=UDim2.new(1,0,0,0)}):Play();
+wait(getgenv().Cooldown4)
+deez:Destroy()
+end
+end),"Move4 Tap")
+ AddSignal(char.Humanoid.AnimationPlayed:Connect(function(v)
+if v.Animation.AnimationId == "rbxassetid://109617620932970" then
+v:Stop()
+local rnd = math.random(0,1)
+if rnd == 0 then 
+local Anim = Instance.new("Animation")
+Anim.AnimationId = "rbxassetid://95171537920426"
+local k = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(Anim)
+k:Play()
+k.Priority = Enum.AnimationPriority.Action3
+k:AdjustSpeed(1)
+k.TimePosition = 1.3
+add = 1
+task.delay(4,function() add = 0 end)
+_G.yas = game:GetService("RunService").Heartbeat:Connect(function(step)
+local old = hrp.CFrame
+hrp.CFrame = old*CFrame.new(0,0,-.5)*CFrame.Angles(0,math.rad(180),0)
+game:GetService("RunService").RenderStepped:Wait()
+hrp.CFrame = old
+
+end) 
+task.wait(.5)
+_G.yas:Disconnect()
+k:Stop(.5)
+else 
+
+local Anim = Instance.new("Animation")
+Anim.AnimationId = "rbxassetid://15134211820"
+local k = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(Anim)
+k:Play()
+k.Priority = Enum.AnimationPriority.Action3
+k:AdjustSpeed(1.3)
+add = 1
+task.delay(4,function() add = 0 end)
+_G.yas = game:GetService("RunService").Heartbeat:Connect(function(step)
+local old = hrp.CFrame
+hrp.CFrame = old*CFrame.new(0,0,-.5)*CFrame.Angles(0,math.rad(-90),0)
+game:GetService("RunService").RenderStepped:Wait()
+hrp.CFrame = old
+
+end) 
+task.wait(.7)
+_G.yas:Disconnect()
+k:Stop(.4)
+end
+end end), "Move3")
 game:GetService("StarterGui"):SetCore("SendNotification", 
-{ Title = string.upper('Akiha Vermillion'); 
-Text = "LOADED";
-Duration = 5; Button1 = "0\(w)/0"; })
+{ Title = string.upper('¡CORRUPT!); 
+Text = "404";
+Duration = 5; Button1 = "- Fatal Error -"; })
 
 end
 MainEnv()
-notif:SendNotification("Success", '"Corrupt Bloxxer" LOADED!', 4)
+notif:SendNotification("Success", '"Corrupt Bloxxer " LOADED!', 4)
 task.wait(4)
-notif:SendNotification("Warning", 'Made by matter on discord', 4)
+notif:SendNotification("Warning", 'Made by Matter on discord', 4)
 task.wait(4)
-notif:SendNotification("Info", 'Credits: \nScript made by matter', 3)
+notif:SendNotification("Info", 'Credits: \nScript made by Matter', 3)
 task.wait(3)
 notif:SendNotification("Info", 'VFX by Reap', 3)
 task.wait(3)
@@ -1591,7 +1706,7 @@ notif:SendNotification("Info", 'Lightning Effects by EvLightning on Github', 3)
 task.wait(3)
 notif:SendNotification("Info", 'Signal Script by i.am.an.agent on Discord', 3)
 task.wait(3)
-notif:SendNotification("Info", 'Character Inspired by "Akiha Vermillion" from "Tsukihime"', 
+notif:SendNotification("Info", 'Character "Akiha Vermillion" from "Tsukihime"', 
 16)
 --[[
 TODO: 
