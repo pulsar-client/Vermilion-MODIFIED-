@@ -16,7 +16,7 @@
 
 
 
-local CameraShakeInstance = loadstring(game:HttpGet("https://raw.githubusercontent.com/Reapvitalized/AllAssetsForRecent/refs/heads/main/CameraShakeInstance.lua"))()
+local CameraShakeInstance = loadstring(game:HttpGet("https://raw.githubusercontent.com/pulsar-client/Vermilion-MODIFIED-/refs/heads/main/Assets/CameraShakeInstance.lua"))()
 local CameraShakePresets = {
 	
 	
