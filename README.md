@@ -12,11 +12,11 @@ External:
 
 - Make it less buggy. = ➕
 
-- Repost everything Reap has to here. = ➗
+- Repost everything Reap has to here. = ➖
 
 Script: 
 
-- Add Better Graphics and extension to the Loadstring. = ➖
+- Add Better Graphics and extension to the Loadstring. = ➗
 
 - Replace the phrases of the script. = ➕
 
