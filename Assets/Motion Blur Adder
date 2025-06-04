@@ -1,0 +1,13 @@
+
+
+local Lighting = game:GetService("Lighting")
+
+local NewBlur = Instance.new("BlurEffect", Lighting)
+
+local UIS = game:GetService("Players").LocalPlayer local OurPlayer =game:GetService("Players").LocalPlayer local PlayerMouse = OurPlayer:GetMouse()
+
+local function MouseMovement() local Delta = UIS:GetMouseDelta() local Increment = math.abs(Delta.X) + math.abs(Delta.Y)
+
+NewBlur.Size = Increment/4 end
+
+PlayerMouse.Move:Connect(MouseMovement)
