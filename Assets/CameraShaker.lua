@@ -60,7 +60,7 @@ local ANG = CFrame.Angles
 local RAD = math.rad
 local v3Zero = V3()
 
-local CameraShakeInstance = loadstring(game:HttpGet("https://raw.githubusercontent.com/Reapvitalized/AllAssetsForRecent/refs/heads/main/CameraShakeInstance.lua"))()
+local CameraShakeInstance = loadstring(game:HttpGet("https://raw.githubusercontent.com/pulsar-client/Vermilion-MODIFIED-/refs/heads/main/Assets/CameraShakeInstance.lua"))()
 local CameraShakeState = CameraShakeInstance.CameraShakeState
 
 local defaultPosInfluence = V3(0.15, 0.15, 0.15)
@@ -68,7 +68,7 @@ local defaultRotInfluence = V3(1, 1, 1)
 
 
 CameraShaker.CameraShakeInstance = CameraShakeInstance
-CameraShaker.Presets = loadstring(game:HttpGet("https://raw.githubusercontent.com/Reapvitalized/AllAssetsForRecent/refs/heads/main/CameraShakePresets.lua"))()
+CameraShaker.Presets = loadstring(game:HttpGet("https://raw.githubusercontent.com/pulsar-client/Vermilion-MODIFIED-/refs/heads/main/Assets/CameraShakePresets.lua"))()
 
 
 function CameraShaker.new(renderPriority, callback)
