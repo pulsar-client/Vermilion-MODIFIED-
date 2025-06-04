@@ -4,7 +4,7 @@
 - This is a private script!
 - This is only used for fun and not for advantages.
 
-# Plans For #A-V: 2.0 (Progress: 28%)
+# Plans For #A-V: 2.0 (Progress: 47%)
 
 External:
 
@@ -16,7 +16,7 @@ External:
 
 Script: 
 
-- Add Better Graphics and extension to the Loadstring. = ➗
+- Add Better Graphics and extension to the Loadstring. = ➕
 
 - Replace the phrases of the script. = ➕
 
