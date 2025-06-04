@@ -1592,10 +1592,7 @@ hrp.CFrame = old*CFrame.new(0,0,-.5)*CFrame.Angles(0,math.rad(-90),0)
 game:GetService("RunService").RenderStepped:Wait()
 hrp.CFrame = old
 
-end) 
-task.wait(.7)
-_G.yas:Disconnect()
-k:Stop(.4)
+end)
 end
 end end), "Move3")
 game:GetService("StarterGui"):SetCore("SendNotification", 
