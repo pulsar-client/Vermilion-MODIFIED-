@@ -51,7 +51,7 @@ if success then
 
 else
 info('Info','Downloading '..filename..filetype,7)
-local filep = game:HttpGet('Https://github.com/pulsar-client/Vermilion-MODIFIED-/tree/main/Assets/raw/refs/heads/main/'..filename..filetype)
+local filep = game:HttpGet('Https://github.com/pulsar-client/Vermilion-MODIFIED-/tree/main/Assets/'..filename..filetype)
 writefile('TSB/'..filename..filetype,filep)
 info('Success','Downloaded '..filename..filetype..'!',7)
 end
