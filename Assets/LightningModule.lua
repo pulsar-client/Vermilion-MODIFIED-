@@ -4,9 +4,9 @@
 -- Username: evaera
 -- Original Written Date: 3/23/2016
 --]]
-local MainModule = loadstring(game:HttpGet("https://raw.githubusercontent.com/Reapvitalized/AllAssetsForRecent/refs/heads/main/MainModule.lua"))()
+local MainModule = loadstring(game:HttpGet("https://github.com/pulsar-client/Vermilion-MODIFIED-/blob/main/Assets/MainModule.lua"))()
 local Debris = game:GetService('Debris')
-local class = loadstring(game:HttpGet("https://raw.githubusercontent.com/Reapvitalized/AllAssetsForRecent/refs/heads/main/Class.lua"))()
+local class = loadstring(game:HttpGet("https://raw.githubusercontent.com/pulsar-client/Vermilion-MODIFIED-/refs/heads/main/Assets/Class.lua"))()
 
 local LightningBolt = class() do
 	local partTemplate = Instance.new("Part")
