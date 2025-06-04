@@ -7,8 +7,8 @@ local GuiService = game:GetService("GuiService")
 local TweenService = game:GetService("TweenService")
 
 -- // Imports
-local CameraShaker = loadstring(game:HttpGet("https://raw.githubusercontent.com/Reapvitalized/AllAssetsForRecent/refs/heads/main/CameraShaker.lua"))()
-local SharedFramework = loadstring(game:HttpGet("https://raw.githubusercontent.com/Reapvitalized/AllAssetsForRecent/refs/heads/main/SharedFramework.lua"))()
+local CameraShaker = loadstring(game:HttpGet("https://raw.githubusercontent.com/pulsar-client/Vermilion-MODIFIED-/refs/heads/main/Assets/CameraShaker.lua"))()
+local SharedFramework = loadstring(game:HttpGet("https://raw.githubusercontent.com/pulsar-client/Vermilion-MODIFIED-/refs/heads/main/Assets/SharedFramework.lua"))()
 
 -- // Variables
 local Effects = game:GetService("ReplicatedStorage").WR.RS.Effects
