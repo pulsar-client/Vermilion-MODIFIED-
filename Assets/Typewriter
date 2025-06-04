@@ -5,7 +5,7 @@ local quoteDelay = 3 -- Adjust this value as needed for the pause between quotes
 
 -- First Quote
 Main:TypeWrite(
-    '...', --// The text
+    '. . .', --// The text
     Color3.new(9,0,0.1), --// Main color (not outline)
     Color3.new(2,0,0), --// Outline Color (aka border text color)
     "rbxassetid://134784067466514", --// Voice (set to "rbxassetid://0" to remove)
@@ -59,7 +59,7 @@ task.wait(quoteDelay)
 
 -- Fourth Quote
 Main:TypeWrite(
-    'Thy ancient souls whisper secrets.', --// The text
+    'Feel my corrupt nature.', --// The text
     Color3.new(9, 0, 0.1), --// Main color
     Color3.new(2, 0, 0), --// Outline Color
     "rbxassetid://134784067466514", --// Voice
