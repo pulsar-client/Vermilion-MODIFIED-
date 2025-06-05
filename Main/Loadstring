@@ -6,6 +6,8 @@ spawn(function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/pulsar-client/Vermilion-MODIFIED-/refs/heads/main/AKIHA_VERMILLION.lua.txt",true))()
 end)
 
+wait(10) -- This will pause the execution for 10 seconds before the next spawn
+
 spawn(function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/pulsar-client/Vermilion-MODIFIED-/refs/heads/main/Assets/Ability-1",true))()
 end)
