@@ -4,7 +4,7 @@
 - This is a private script!
 - This is only used for fun and not for advantages.
 
-# Plans For #A-V: 2.0 (Progress: 89%)
+# Plans For #A-V: 2.0 (Progress: 96%)
 
 External:
 
