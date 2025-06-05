@@ -1,0 +1,176 @@
+local SkillName = "Destroyer Eye" -- The skill name for the hotbar
+local CooldownLengh = 0.2 -- Short cooldown for toggling
+local Burning = false -- Not applicable for this toggle skill
+
+-- Variables for the lock-on functionality
+local lp = game.Players.LocalPlayer
+local char = lp.Character or lp.CharacterAdded:Wait()
+local hrp = char:WaitForChild("HumanoidRootPart")
+local _G_Enabled = false -- Tracks if the lock-on is active or not
+local _G_EN = nil -- Stores the current locked-on enemy
+local _G_yse = nil -- Connection for the Heartbeat loop
+
+-- Define the specific hotbar slot we'll use (e.g., slot "4")
+local HOTBAR_SLOT_NAME = "4"
+local hotbarSlot = lp.PlayerGui:WaitForChild("Hotbar", 10):WaitForChild("Backpack", 10):WaitForChild("Hotbar", 10):WaitForChild(HOTBAR_SLOT_NAME, 10)
+local hotbarBase = hotbarSlot:WaitForChild("Base", 10)
+local hotbarToolName = hotbarBase:WaitForChild("ToolName", 10)
+
+
+local Activated = function()
+    -- Disconnect any existing Heartbeat connection before toggling
+    if _G_yse then
+        _G_yse:Disconnect()
+        _G_yse = nil
+    end
+
+    _G_Enabled = not _G_Enabled -- Toggle the lock-on state
+
+    -- Update the hotbar text based on the toggle state for the specific slot
+    if _G_Enabled then
+        hotbarToolName.Text = "Destroying"
+    else
+        hotbarToolName.Text = "Destroy"
+    end
+
+    if _G_Enabled then
+        -- Start the lock-on loop if enabled
+        _G_yse = game:GetService("RunService").Heartbeat:Connect(function(step)
+            -- Target identification logic (from original code)
+            -- This part finds a target based on recent damage attributes
+            local foundTarget = false
+            for i, part in ipairs(workspace.Live:GetChildren()) do
+                if part:IsA('Model') and part:FindFirstChild('HumanoidRootPart', true) then
+                    pcall(function()
+                        -- Assuming 'char' has 'LastDamageDone' attribute for tracking
+                        local You = string.sub(char:GetAttribute('LastDamageDone') or "", 1, 13)
+                        local Them = string.sub(part:GetAttribute('LastDamage') or "", 1, 13)
+
+                        if You == Them then
+                            _G_EN = part
+                            foundTarget = true
+                            -- You might want to update health here if needed for other logic
+                            -- local health = part.Humanoid.Health
+                        end
+                    end)
+                end
+            end
+
+            -- If no target is found or the current target is invalid, clear _G_EN
+            if not foundTarget or not _G_EN or not _G_EN:FindFirstChild("HumanoidRootPart") or (_G_EN.Humanoid and _G_EN.Humanoid.Health <= 0) then
+                _G_EN = nil
+            end
+
+            -- Only adjust CFrame if a valid target exists and it's not the player character
+            if _G_EN ~= nil and _G_EN ~= char and _G_EN:FindFirstChild("HumanoidRootPart") then
+                hrp.CFrame = CFrame.lookAt(hrp.Position,
+                Vector3.new(_G_EN.HumanoidRootPart.Position.X, hrp.Position.Y, _G_EN.HumanoidRootPart.Position.Z))
+                game:GetService("RunService").RenderStepped:Wait()
+                hrp.CFrame = CFrame.lookAt(hrp.Position,
+                Vector3.new(_G_EN.HumanoidRootPart.Position.X, hrp.Position.Y, _G_EN.HumanoidRootPart.Position.Z))
+            end
+        end)
+    else
+        _G_EN = nil -- Clear target when disabled
+    end
+end
+
+-- [[ THE CODE, MODIFY IF YOU WANT. ]]
+local SkillTemplate = Instance.new("Tool")
+SkillTemplate.Name = SkillName
+SkillTemplate.RequiresHandle = false
+SkillTemplate.ManualActivationOnly = false
+SkillTemplate.CanBeDropped = false
+SkillTemplate:SetAttribute("Regged", false)
+SkillTemplate:SetAttribute("Skill", true)
+SkillTemplate.Parent = game.Players.LocalPlayer.Backpack
+
+-- Set the hotbar slot based on our chosen slot name
+local ks = HOTBAR_SLOT_NAME
+
+local OnCooldown = false
+local cooldownFunction = function()
+    OnCooldown = true
+    local cd = lp.PlayerGui.Hotbar.Backpack.LocalScript.Cooldown:Clone()
+    cd.Parent = hotbarBase -- Parent the cooldown UI directly to the base of our chosen slot
+
+    local cdTween = game:GetService("TweenService"):Create(cd, TweenInfo.new(CooldownLengh), {Size = UDim2.new(1, 0, -0.12, 0)})
+    cdTween:Play()
+    cdTween.Completed:Connect(function()
+        OnCooldown = false
+        cd:Destroy()
+        hotbarBase.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+        game:GetService("TweenService"):Create(hotbarBase, TweenInfo.new(1), {BackgroundColor3 = Color3.fromRGB(31, 31, 31)}):Play()
+    end)
+end
+
+-- Initial setup for the chosen hotbar slot
+-- Ensure the hotbar element is visible and set its initial text
+hotbarSlot.Visible = true
+hotbarToolName.Text = SkillName -- Set initial text to "Destroyer Eye"
+
+if Burning then
+    local fireLiterally = lp.PlayerGui.Hotbar.Backpack.LocalScript.Flipbook:Clone()
+    fireLiterally.Parent = hotbarBase
+    fireLiterally.LocalScript.Enabled = true
+end
+hotbarBase.MouseButton1Click:Connect(function()
+    if not OnCooldown then
+        cooldownFunction()
+        Activated()
+    end
+end)
+
+
+local Kmg = {
+    ["1"] = Enum.KeyCode.One,
+    ["2"] = Enum.KeyCode.Two,
+    ["3"] = Enum.KeyCode.Three,
+    ["4"] = Enum.KeyCode.Four,
+    ["5"] = Enum.KeyCode.Five,
+    ["6"] = Enum.KeyCode.Six,
+    ["7"] = Enum.KeyCode.Seven,
+    ["8"] = Enum.KeyCode.Eight,
+    ["9"] = Enum.KeyCode.Nine,
+    ["0"] = Enum.KeyCode.Zero
+}
+local kb = Kmg[ks]
+
+local uis = game:GetService("UserInputService")
+local con = uis.InputBegan:Connect(function(input)
+    if input.KeyCode == kb then
+        -- We no longer need to search for the hotbar slot text, as we directly target the slot.
+        -- Check if chat bar is visible to prevent accidental activation.
+        if not OnCooldown and not lp.PlayerGui.Chat.Frame.ChatBarParentFrame.Frame.BoxFrame.Frame.TextLabel.Visible then
+            cooldownFunction()
+            Activated()
+        end
+    end
+end)
+
+lp.CharacterAdded:Connect(function(newChar)
+    char = newChar
+    hrp = newChar:WaitForChild("HumanoidRootPart")
+    newChar:WaitForChild("Humanoid").Died:Connect(function()
+        con:Disconnect()
+        if _G_yse then -- Disconnect the lock-on heartbeat on death
+            _G_yse:Disconnect()
+            _G_yse = nil
+        end
+        _G_Enabled = false -- Reset toggle state on death
+        _G_EN = nil -- Clear target on death
+    end)
+end)
+
+-- Initial connection for when the script first runs (if character already exists)
+if char and char.Humanoid then
+    char.Humanoid.Died:Connect(function()
+        con:Disconnect()
+        if _G_yse then -- Disconnect the lock-on heartbeat on death
+            _G_yse:Disconnect()
+            _G_yse = nil
+        end
+        _G_Enabled = false -- Reset toggle state on death
+        _G_EN = nil -- Clear target on death
+    end)
+end
