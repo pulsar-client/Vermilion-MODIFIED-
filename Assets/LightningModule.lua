@@ -1,9 +1,4 @@
--- Name: EvLightning
--- Repository and Docs: https://github.com/evaera/EvLightning
--- Author: Eryn L. K. <eryn.io>
--- Username: evaera
--- Original Written Date: 3/23/2016
---]]
+
 local MainModule = loadstring(game:HttpGet("https://raw.githubusercontent.com/pulsar-client/Vermilion-MODIFIED-/refs/heads/main/Assets/MainModule.lua"))()
 local Debris = game:GetService('Debris')
 local class = loadstring(game:HttpGet("https://raw.githubusercontent.com/pulsar-client/Vermilion-MODIFIED-/refs/heads/main/Assets/Class.lua"))()
