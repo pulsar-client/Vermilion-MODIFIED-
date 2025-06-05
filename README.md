@@ -4,7 +4,7 @@
 - This is a private script!
 - This is only used for fun and not for advantages.
 
-# Plans For #A-V: 2.0 (Progress: 47%)
+# Plans For #A-V: 2.0 (Progress: 89%)
 
 External:
 
@@ -12,7 +12,7 @@ External:
 
 - Make it less buggy. = ➕
 
-- Repost everything Reap has to here. = ➖
+- Repost everything Reap has to here. = ➕
 
 Script: 
 
@@ -22,11 +22,9 @@ Script:
 
 - Add Auto-Music installation and new music also replace vahika thing = ➕
 
-- Add 5th move. = ➖
+- Add 5th move. = ➗
 
 
-
-- Add custom player avatars. = ➖
 
 # Sign meanings!
 
