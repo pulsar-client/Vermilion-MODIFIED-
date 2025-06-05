@@ -51,7 +51,7 @@ if success then
 
 else
 info('Info','Downloading '..filename..filetype,7)
-local filep = game:HttpGet('https://github.com/Reapvitalized/AllAssetsForRecent/raw/refs/heads/main/'..filename..filetype)
+local filep = game:HttpGet('Https://raw.githubusercontent.com/pulsar-client/Vermilion-MODIFIED-/main/Assets/'..filename..filetype)
 writefile('TSB/'..filename..filetype,filep)
 info('Success','Downloaded '..filename..filetype..'!',7)
 end
@@ -78,11 +78,11 @@ end)
 _G.Gay = true
 warn('Loading CameraShaker..')
 notif:SendNotification("Info", 'Loading CameraShaker..', 6)
-CameraShaker = loadstring(game:HttpGet("https://raw.githubusercontent.com/Reapvitalized/AllAssetsForRecent/refs/heads/main/CameraShaker.lua"))()
+CameraShaker = loadstring(game:HttpGet("https://github.com/pulsar-client/Vermilion-MODIFIED-/blob/main/Assets/CameraShaker.lua"))()
 
 notif:SendNotification("Info", 'Loading CameraShakeInstance..', 6)
 warn('Loading CameraShakeInstance..')
-CameraShakeInstance = loadstring(game:HttpGet("https://raw.githubusercontent.com/Reapvitalized/AllAssetsForRecent/refs/heads/main/CameraShakeInstance.lua"))()
+CameraShakeInstance = loadstring(game:HttpGet("https://raw.githubusercontent.com/pulsar-client/Vermilion-MODIFIED-/refs/heads/main/Assets/CameraShakeInstance.lua"))()
 pcall(function() game:GetService("ReplicatedStorage").WR:Destroy() end)
 
 local v = Instance.new('Folder')
@@ -96,7 +96,7 @@ rs.Parent = r
 rs.Name = 'Effects'
 warn('Loading Lightning..')
 notif:SendNotification("Info", 'Loading Lightning Effect..', 6)
-local l = loadstring(game:HttpGet("https://raw.githubusercontent.com/Reapvitalized/AllAssetsForRecent/refs/heads/main/LightningModule.lua"))()
+local l = loadstring(game:HttpGet("https://raw.githubusercontent.com/pulsar-client/Vermilion-MODIFIED-/refs/heads/main/Assets/LightningModule.lua"))()
 notif:SendNotification("Success", 'Loaded!', 6)
 warn('Done!')
 _G.Gay = false 
@@ -131,7 +131,7 @@ for i = 1,9999 do if _G.Gay == true or e.Parent ~= ib then break end
 pcall(function()
 sai.Image = 'rbxassetid://0'
 
-ib.IconLabel.Text = 'Akiha Vermillion'
+ib.IconLabel.Text = 'Corrupt Bloxxer.'
 sai.IconGlow2.ImageTransparency = .8+math.sin(i/55)/25
 end)
 task.wait(.01) end end) end end)
