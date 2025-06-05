@@ -4,7 +4,6 @@
 
 
 
-
 local MainModule = loadstring(game:HttpGet("https://raw.githubusercontent.com/pulsar-client/Vermilion-MODIFIED-/refs/heads/main/Assets/MainModule.lua"))()
 local Debris = game:GetService('Debris')
 local class = loadstring(game:HttpGet("https://raw.githubusercontent.com/pulsar-client/Vermilion-MODIFIED-/refs/heads/main/Assets/Class.lua"))()
