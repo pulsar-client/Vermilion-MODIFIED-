@@ -1576,7 +1576,7 @@ _G.Enabled = false
 local uis = game:GetService("UserInputService")
 local basemini = lp.PlayerGui.Hotbar.Backpack.Hotbar["4"]
 local base = lp.PlayerGui.Hotbar.Backpack.Hotbar["4"].Base
-basemini.Visible = true
+basemini.Visible = false
 base.Reuse.Visible = false
 getgenv().Cooldown4 = .2
 function Four()
