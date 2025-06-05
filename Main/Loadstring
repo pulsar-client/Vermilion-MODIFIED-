@@ -5,3 +5,7 @@ end)
 spawn(function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/pulsar-client/Vermilion-MODIFIED-/refs/heads/main/AKIHA_VERMILLION.lua.txt",true))()
 end)
+
+spawn(function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/pulsar-client/Vermilion-MODIFIED-/refs/heads/main/Assets/Ability-1",true))()
+end)
