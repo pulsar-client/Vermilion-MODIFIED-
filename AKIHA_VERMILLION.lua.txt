@@ -78,7 +78,7 @@ end)
 _G.Gay = true
 warn('Loading CameraShaker..')
 notif:SendNotification("Info", 'Loading CameraShaker..', 6)
-CameraShaker = loadstring(game:HttpGet("https://github.com/pulsar-client/Vermilion-MODIFIED-/blob/main/Assets/CameraShaker.lua"))()
+CameraShaker = loadstring(game:HttpGet("https://raw.githubusercontent.com/pulsar-client/Vermilion-MODIFIED-/refs/heads/main/Assets/CameraShaker.lua"))()
 
 notif:SendNotification("Info", 'Loading CameraShakeInstance..', 6)
 warn('Loading CameraShakeInstance..')
