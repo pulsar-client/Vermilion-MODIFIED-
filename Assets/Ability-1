@@ -11,7 +11,7 @@ local _G_EN = nil -- Stores the current locked-on enemy
 local _G_yse = nil -- Connection for the Heartbeat loop
 
 -- Define the specific hotbar slot we'll use (e.g., slot "4")
-local HOTBAR_SLOT_NAME = "4"
+local HOTBAR_SLOT_NAME = "5"
 local hotbarSlot = lp.PlayerGui:WaitForChild("Hotbar", 10):WaitForChild("Backpack", 10):WaitForChild("Hotbar", 10):WaitForChild(HOTBAR_SLOT_NAME, 10)
 local hotbarBase = hotbarSlot:WaitForChild("Base", 10)
 local hotbarToolName = hotbarBase:WaitForChild("ToolName", 10)
